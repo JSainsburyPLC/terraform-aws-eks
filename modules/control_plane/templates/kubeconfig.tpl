@@ -20,9 +20,12 @@ users:
 - name: ${kubeconfig_name}
   user:
     exec:
-      apiVersion: client.authentication.k8s.io/v1beta1
-      command: ${aws_authenticator_command}
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      command: aws
       args:
-${aws_authenticator_command_args}
-${aws_authenticator_additional_args}
-${aws_authenticator_env_variables}
+      - --region
+      - ${region}
+      - eks
+      - get-token
+      - --cluster-name
+      - ${cluster_name}

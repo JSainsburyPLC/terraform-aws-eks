@@ -131,30 +131,6 @@ variable "write_kubeconfig" {
   default     = true
 }
 
-variable "kubeconfig_aws_authenticator_command" {
-  description = "Command to use to fetch AWS EKS credentials."
-  type        = string
-  default     = "aws-iam-authenticator"
-}
-
-variable "kubeconfig_aws_authenticator_command_args" {
-  description = "Default arguments passed to the authenticator command. Defaults to [token -i $cluster_name]."
-  type        = list(string)
-  default     = []
-}
-
-variable "kubeconfig_aws_authenticator_additional_args" {
-  description = "Any additional arguments to pass to the authenticator such as the role to assume. e.g. [\"-r\", \"MyEksRole\"]."
-  type        = list(string)
-  default     = []
-}
-
-variable "kubeconfig_aws_authenticator_env_variables" {
-  description = "Environment variables that should be used when executing the authenticator. e.g. { AWS_PROFILE = \"eks\"}."
-  type        = map(string)
-  default     = {}
-}
-
 variable "kubeconfig_name" {
   description = "Override the default name used for items kubeconfig."
   type        = string
@@ -177,4 +153,9 @@ variable "cluster_encryption_resources" {
   type        = list(string)
   description = "A list of the EKS resources to encrypt."
   default     = ["secrets"]
+}
+
+variable "region" {
+  type        = string
+  description = "AWS region"
 }
