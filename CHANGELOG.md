@@ -2,13 +2,20 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v11.2.0"></a>
+## [v11.2.0] - 2022-07-29
+### 🐛 Bug Fixes
+- [d9bc92c](https://github.com/devopsmakers/terraform-aws-eks/commit/d9bc92c) replace deprecated data.template_file with templatefile function BOS-1567 ([#4](https://github.com/devopsmakers/terraform-aws-eks/issues/4))
+
+
 <a name="v11.1.0"></a>
-## [v11.1.0] - 2022-05-26
+## [v11.1.0] - 2022-05-27
 ### ✨ Features
 - [cbde2e7](https://github.com/devopsmakers/terraform-aws-eks/commit/cbde2e7) use aws instead of aws-iam-authenticator and simplify BOS-1154
 
 ### 🔧 Maintenance
 - [3b0cef8](https://github.com/devopsmakers/terraform-aws-eks/commit/3b0cef8) Use new version of auth (old one no longer works
+- **release:** [25eec11](https://github.com/devopsmakers/terraform-aws-eks/commit/25eec11) Update changelog for v11.1.0
 
 
 <a name="v11.0.1"></a>
@@ -134,7 +141,8 @@
 - [6338f6d](https://github.com/devopsmakers/terraform-aws-eks/commit/6338f6d) Initial commit
 
 
-[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.1.0...HEAD
+[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.0...HEAD
+[v11.2.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.1.0...v11.2.0
 [v11.1.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.0.1...v11.1.0
 [v11.0.1]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.0.0...v11.0.1
 [v11.0.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v10.2.3...v11.0.0
