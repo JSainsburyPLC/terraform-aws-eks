@@ -10,7 +10,6 @@ This submodule is designed for use by both the parent `eks` module and by the us
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.9 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 2.52.0 |
 | <a name="requirement_local"></a> [local](#requirement\_local) | >= 1.2 |
-| <a name="requirement_template"></a> [template](#requirement\_template) | >= 2.1 |
 
 ## Providers
 
@@ -18,7 +17,6 @@ This submodule is designed for use by both the parent `eks` module and by the us
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.52.0 |
 | <a name="provider_local"></a> [local](#provider\_local) | >= 1.2 |
-| <a name="provider_template"></a> [template](#provider\_template) | >= 2.1 |
 
 ## Modules
 
@@ -39,7 +37,6 @@ No modules.
 | [local_file.kubeconfig](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [aws_iam_policy_document.cluster_assume_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [aws_iam_role.custom_cluster_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_role) | data source |
-| [template_file.kubeconfig](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
 
 ## Inputs
 
