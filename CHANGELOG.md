@@ -2,10 +2,19 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v11.2.1"></a>
+## [v11.2.1] - 2022-09-07
+### 🔧 Maintenance
+- [71f596a](https://github.com/devopsmakers/terraform-aws-eks/commit/71f596a) update kubeconfig to current apiversion
+
+
 <a name="v11.2.0"></a>
 ## [v11.2.0] - 2022-07-29
 ### 🐛 Bug Fixes
 - [d9bc92c](https://github.com/devopsmakers/terraform-aws-eks/commit/d9bc92c) replace deprecated data.template_file with templatefile function BOS-1567 ([#4](https://github.com/devopsmakers/terraform-aws-eks/issues/4))
+
+### 🔧 Maintenance
+- **release:** [9a8d031](https://github.com/devopsmakers/terraform-aws-eks/commit/9a8d031) Update changelog for v11.2.0
 
 
 <a name="v11.1.0"></a>
@@ -141,7 +150,8 @@
 - [6338f6d](https://github.com/devopsmakers/terraform-aws-eks/commit/6338f6d) Initial commit
 
 
-[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.0...HEAD
+[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.1...HEAD
+[v11.2.1]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.0...v11.2.1
 [v11.2.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.1.0...v11.2.0
 [v11.1.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.0.1...v11.1.0
 [v11.0.1]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.0.0...v11.0.1
