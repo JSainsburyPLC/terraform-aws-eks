@@ -227,6 +227,7 @@ resource "aws_security_group" "worker_groups" {
   )
 }
 
+#trivy:ignore:aws-vpc-no-public-egress-sgr
 resource "aws_security_group_rule" "workers_egress_internet" {
   count             = local.worker_create_security_group ? 1 : 0
   description       = "Allow nodes all egress to the Internet."
