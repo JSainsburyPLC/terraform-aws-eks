@@ -1,0 +1,29 @@
+name: Test Trivy Scan
+
+on:
+  push:
+    branches:
+      - BOS-2456
+  workflow_dispatch:
+
+jobs:
+  test-trivy:
+    runs-on: ubuntu-latest
+    steps:
+      # This checks out the required branch of your repo (master in this case)
+      - uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner in IaC mode
+        uses: aquasecurity/trivy-action@0.30.0
+        with:
+          scan-type: 'config'
+          hide-progress: true
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'trivy-results.sarif'
