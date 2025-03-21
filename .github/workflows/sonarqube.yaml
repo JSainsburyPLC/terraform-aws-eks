@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - BOS-2456-sonarqube
+  workflow_call:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sonarqube_terraform:
+    name: SonarQube - Scan Terraform project
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: sonarsource/sonarqube-scan-action@v3.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_ORG_TOKEN }}
+          SONAR_HOST_URL: ${{ vars.SONAR_ORG_HOST_URL }}
+        with:
+          args: >
+            -Dsonar.projectKey=JSainsburyPLC_terraform-aws-eks_f7d38174-5da1-431e-bbeb-6a2ab9eee922
