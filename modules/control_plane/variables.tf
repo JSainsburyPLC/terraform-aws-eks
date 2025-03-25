@@ -26,6 +26,12 @@ variable "cluster_log_retention_in_days" {
   type        = number
 }
 
+variable "cluster_log_group_class" {
+  default     = "INFREQUENT_ACCESS"
+  description = "Specified the log class of the log group. Possible values are: STANDARD or INFREQUENT_ACCESS"
+  type        = string
+}
+
 variable "cluster_name" {
   description = "Name of the EKS cluster. Also used as a prefix in names of related resources."
   type        = string

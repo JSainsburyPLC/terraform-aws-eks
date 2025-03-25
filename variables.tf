@@ -14,6 +14,12 @@ variable "cluster_log_retention_in_days" {
   type        = number
 }
 
+variable "cluster_log_group_class" {
+  default     = "INFREQUENT_ACCESS"
+  description = "Specified the log class of the log group. Possible values are: STANDARD or INFREQUENT_ACCESS"
+  type        = string
+}
+
 variable "cluster_name" {
   description = "Name of the EKS cluster. Also used as a prefix in names of related resources."
   type        = string
@@ -45,6 +51,7 @@ variable "write_kubeconfig" {
 
 variable "manage_aws_auth" {
   description = "Whether to apply the aws-auth configmap file."
+  type        = bool
   default     = true
 }
 
@@ -100,12 +107,6 @@ variable "worker_groups_defaults" {
   description = "Override default values for target groups. See worker_group_defaults in local.tf for valid keys."
   type        = any
   default     = {}
-}
-
-variable "worker_groups_launch_template" {
-  description = "A list of maps defining worker group configurations to be defined using AWS Launch Templates. See workers_group_defaults for valid keys."
-  type        = any
-  default     = []
 }
 
 variable "worker_security_group_id" {

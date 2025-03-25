@@ -13,6 +13,7 @@ module "control_plane" {
   cluster_iam_role_name                        = var.cluster_iam_role_name
   cluster_log_kms_key_id                       = var.cluster_log_kms_key_id
   cluster_log_retention_in_days                = var.cluster_log_retention_in_days
+  cluster_log_group_class                      = var.cluster_log_group_class
   cluster_name                                 = var.cluster_name
   cluster_security_group_id                    = var.cluster_security_group_id
   cluster_version                              = var.cluster_version

@@ -11,5 +11,5 @@ resource "aws_iam_openid_connect_provider" "oidc_provider" {
   count           = var.create_eks && var.enable_irsa ? 1 : 0
   client_id_list  = ["sts.amazonaws.com"]
   thumbprint_list = [var.eks_oidc_root_ca_thumbprint]
-  url             = flatten(concat(aws_eks_cluster.this[*].identity[*].oidc.0.issuer, [""]))[0]
+  url             = flatten(concat(aws_eks_cluster.this[*].identity[*].oidc[0].issuer, [""]))[0]
 }
