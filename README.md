@@ -137,6 +137,7 @@ No resources.
 | <a name="input_node_groups_defaults"></a> [node\_groups\_defaults](#input\_node\_groups\_defaults) | Map of values to be applied to all node groups. See `node_groups` module's documentaton for more details | `any` | `{}` | no |
 | <a name="input_node_groups_role_name"></a> [node\_groups\_role\_name](#input\_node\_groups\_role\_name) | User defined workers role name. | `string` | `""` | no |
 | <a name="input_permissions_boundary"></a> [permissions\_boundary](#input\_permissions\_boundary) | If provided, all IAM roles will be created with this permissions boundary attached. | `string` | `null` | no |
+| <a name="input_region"></a> [region](#input\_region) | AWS region | `string` | n/a | yes |
 | <a name="input_subnets"></a> [subnets](#input\_subnets) | A list of subnets to place the EKS cluster and workers within. | `list(string)` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources. | `map(string)` | `{}` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | VPC where the cluster and workers will be deployed. | `string` | n/a | yes |

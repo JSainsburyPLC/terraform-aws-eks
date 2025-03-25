@@ -348,3 +348,8 @@ variable "cluster_encryption_resources" {
   description = "A list of the EKS resources to encrypt."
   default     = ["secrets"]
 }
+
+variable "region" {
+  type        = string
+  description = "AWS region"
+}

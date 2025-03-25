@@ -1,6 +1,6 @@
 module "control_plane" {
-  source = "./modules/control_plane"
-
+  source                                       = "./modules/control_plane"
+  region                                       = var.region
   cluster_create_security_group                = var.cluster_create_security_group
   cluster_create_timeout                       = var.cluster_create_timeout
   cluster_delete_timeout                       = var.cluster_delete_timeout
