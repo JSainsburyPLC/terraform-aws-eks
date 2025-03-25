@@ -11,6 +11,7 @@ variable "cluster_name" {
 
 variable "manage_aws_auth" {
   description = "Whether to apply the aws-auth configmap file."
+  type        = bool
   default     = true
 }
 
