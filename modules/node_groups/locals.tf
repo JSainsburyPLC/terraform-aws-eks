@@ -1,6 +1,6 @@
 locals {
   node_group_defaults = {
-    iam_role_arn     = concat(aws_iam_role.node_groups.*.arn, [""])[0]
+    iam_role_arn     = concat(aws_iam_role.node_groups[*].arn, [""])[0]
     instance_type    = "m4.large"  # Size of the node group instances.
     desired_capacity = "1"         # Desired node group capacity in the autoscaling group. Note: Ignored on change. Hint: Use the Cluster Autoscaler.
     max_capacity     = "3"         # Maximum node group capacity in the autoscaling group.
