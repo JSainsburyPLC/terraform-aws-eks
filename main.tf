@@ -22,17 +22,13 @@ module "control_plane" {
   eks_oidc_root_ca_thumbprint          = var.eks_oidc_root_ca_thumbprint
   enable_irsa                          = var.enable_irsa
   iam_path                             = var.iam_path
-  # kubeconfig_aws_authenticator_additional_args = var.kubeconfig_aws_authenticator_additional_args
-  # kubeconfig_aws_authenticator_command         = var.kubeconfig_aws_authenticator_command
-  # kubeconfig_aws_authenticator_command_args    = var.kubeconfig_aws_authenticator_command_args
-  # kubeconfig_aws_authenticator_env_variables   = var.kubeconfig_aws_authenticator_env_variables
-  kubeconfig_name              = var.kubeconfig_name
-  manage_cluster_iam_resources = var.manage_cluster_iam_resources
-  permissions_boundary         = var.permissions_boundary
-  subnets                      = var.subnets
-  tags                         = var.tags
-  vpc_id                       = var.vpc_id
-  write_kubeconfig             = var.write_kubeconfig
+  kubeconfig_name                      = var.kubeconfig_name
+  manage_cluster_iam_resources         = var.manage_cluster_iam_resources
+  permissions_boundary                 = var.permissions_boundary
+  subnets                              = var.subnets
+  tags                                 = var.tags
+  vpc_id                               = var.vpc_id
+  write_kubeconfig                     = var.write_kubeconfig
 }
 
 module "worker_groups" {
