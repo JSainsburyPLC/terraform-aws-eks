@@ -14,6 +14,12 @@ variable "cluster_log_retention_in_days" {
   type        = number
 }
 
+variable "cluster_log_group_class" {
+  default     = "INFREQUENT_ACCESS"
+  description = "Specified the log class of the log group. Possible values are: STANDARD or INFREQUENT_ACCESS"
+  type        = string
+}
+
 variable "cluster_name" {
   description = "Name of the EKS cluster. Also used as a prefix in names of related resources."
   type        = string
@@ -45,6 +51,7 @@ variable "write_kubeconfig" {
 
 variable "manage_aws_auth" {
   description = "Whether to apply the aws-auth configmap file."
+  type        = bool
   default     = true
 }
 
@@ -102,12 +109,6 @@ variable "worker_groups_defaults" {
   default     = {}
 }
 
-variable "worker_groups_launch_template" {
-  description = "A list of maps defining worker group configurations to be defined using AWS Launch Templates. See workers_group_defaults for valid keys."
-  type        = any
-  default     = []
-}
-
 variable "worker_security_group_id" {
   description = "If provided, all workers will be attached to this security group. If not given, a security group will be created with necessary ingress/egress to work with the EKS cluster."
   type        = string
@@ -160,30 +161,6 @@ variable "node_groups_additional_policies" {
   description = "Additional policies to be added to workers"
   type        = list(string)
   default     = []
-}
-
-variable "kubeconfig_aws_authenticator_command" {
-  description = "Command to use to fetch AWS EKS credentials."
-  type        = string
-  default     = "aws-iam-authenticator"
-}
-
-variable "kubeconfig_aws_authenticator_command_args" {
-  description = "Default arguments passed to the authenticator command. Defaults to [token -i $cluster_name]."
-  type        = list(string)
-  default     = []
-}
-
-variable "kubeconfig_aws_authenticator_additional_args" {
-  description = "Any additional arguments to pass to the authenticator such as the role to assume. e.g. [\"-r\", \"MyEksRole\"]."
-  type        = list(string)
-  default     = []
-}
-
-variable "kubeconfig_aws_authenticator_env_variables" {
-  description = "Environment variables that should be used when executing the authenticator. e.g. { AWS_PROFILE = \"eks\"}."
-  type        = map(string)
-  default     = {}
 }
 
 variable "kubeconfig_name" {
@@ -346,4 +323,9 @@ variable "cluster_encryption_resources" {
   type        = list(string)
   description = "A list of the EKS resources to encrypt."
   default     = ["secrets"]
+}
+
+variable "region" {
+  type        = string
+  description = "AWS region"
 }

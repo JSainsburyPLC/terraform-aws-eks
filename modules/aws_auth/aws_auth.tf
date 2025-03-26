@@ -35,7 +35,7 @@ resource "kubernetes_config_map" "aws_auth" {
 
   data = {
     mapRoles    = <<EOF
-${join("", distinct(data.template_file.map_instances.*.rendered))}
+${join("", distinct(data.template_file.map_instances[*].rendered))}
 %{if length(var.map_roles) != 0}${yamlencode(var.map_roles)}%{endif}
 EOF
     mapUsers    = yamlencode(var.map_users)

@@ -1,11 +1,11 @@
 output "cluster_id" {
   description = "The name/id of the EKS cluster."
-  value       = element(concat(aws_eks_cluster.this.*.id, [""]), 0)
+  value       = element(concat(aws_eks_cluster.this[*].id, [""]), 0)
 }
 
 output "cluster_arn" {
   description = "The Amazon Resource Name (ARN) of the cluster."
-  value       = element(concat(aws_eks_cluster.this.*.arn, [""]), 0)
+  value       = element(concat(aws_eks_cluster.this[*].arn, [""]), 0)
 }
 
 output "cluster_certificate_authority_data" {
@@ -15,7 +15,7 @@ output "cluster_certificate_authority_data" {
 
 output "cluster_endpoint" {
   description = "The endpoint for your EKS Kubernetes API."
-  value       = element(concat(aws_eks_cluster.this.*.endpoint, [""]), 0)
+  value       = element(concat(aws_eks_cluster.this[*].endpoint, [""]), 0)
 }
 
 output "cluster_version" {
@@ -35,7 +35,7 @@ output "cluster_iam_role_arn" {
 
 output "cluster_oidc_issuer_url" {
   description = "The URL on the EKS cluster OIDC Issuer"
-  value       = var.enable_irsa ? flatten(concat(aws_eks_cluster.this[*].identity[*].oidc.0.issuer, [""]))[0] : null
+  value       = var.enable_irsa ? flatten(concat(aws_eks_cluster.this[*].identity[*].oidc[0].issuer, [""]))[0] : null
 }
 
 output "cloudwatch_log_group_name" {
@@ -50,7 +50,7 @@ output "kubeconfig" {
 
 output "kubeconfig_filename" {
   description = "The filename of the generated kubectl config."
-  value       = concat(local_file.kubeconfig.*.filename, [""])[0]
+  value       = concat(local_file.kubeconfig[*].filename, [""])[0]
 }
 
 output "oidc_provider_arn" {

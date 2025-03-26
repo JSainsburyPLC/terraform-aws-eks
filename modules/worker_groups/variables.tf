@@ -31,6 +31,7 @@ variable "subnets" {
   type        = list(string)
 }
 
+# tflint-ignore: terraform_unused_declarations
 variable "worker_groups_role_name" {
   description = "User defined worker groups role name."
   type        = string
@@ -54,7 +55,7 @@ variable "attach_worker_cni_policy" {
   type        = bool
   default     = true
 }
-
+# tflint-ignore: terraform_unused_declarations
 variable "worker_groups_additional_policies" {
   description = "Additional policies to be added to worker groups."
   type        = list(string)
