@@ -2,10 +2,19 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v11.2.3"></a>
+## [v11.2.3] - 2025-03-27
+### 🔧 Maintenance
+- [e87a9e7](https://github.com/devopsmakers/terraform-aws-eks/commit/e87a9e7) change log_group name back to cluster ([#7](https://github.com/devopsmakers/terraform-aws-eks/issues/7))
+
+
 <a name="v11.2.2"></a>
 ## [v11.2.2] - 2025-03-26
 ### ✨ Features
 - [5cff1d3](https://github.com/devopsmakers/terraform-aws-eks/commit/5cff1d3) support log_group_class - BOS-3058 ([#6](https://github.com/devopsmakers/terraform-aws-eks/issues/6))
+
+### 🔧 Maintenance
+- **release:** [c57d6d0](https://github.com/devopsmakers/terraform-aws-eks/commit/c57d6d0) Update changelog for v11.2.2
 
 
 <a name="v11.2.1"></a>
@@ -157,7 +166,8 @@
 - [6338f6d](https://github.com/devopsmakers/terraform-aws-eks/commit/6338f6d) Initial commit
 
 
-[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.2...HEAD
+[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.3...HEAD
+[v11.2.3]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.2...v11.2.3
 [v11.2.2]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.1...v11.2.2
 [v11.2.1]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.0...v11.2.1
 [v11.2.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.1.0...v11.2.0
