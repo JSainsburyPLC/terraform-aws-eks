@@ -14,6 +14,7 @@ resource "aws_eks_cluster" "this" {
   role_arn                  = local.cluster_iam_role_arn
   version                   = var.cluster_version
   tags                      = var.tags
+  deletion_protection       = var.deletion_protection
 
   vpc_config {
     security_group_ids      = [local.cluster_security_group_id]
