@@ -169,5 +169,5 @@ variable "region" {
 variable "deletion_protection" {
   description = "Whether to enable deletion protection for the EKS cluster."
   type        = bool
-  default     = false
+  default     = true
 }
