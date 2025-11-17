@@ -16,6 +16,10 @@ resource "aws_eks_cluster" "this" {
   tags                      = var.tags
   deletion_protection       = var.deletion_protection
 
+  access_config {
+    authentication_mode = "API_AND_CONFIG_MAP"
+  }
+
   vpc_config {
     security_group_ids      = [local.cluster_security_group_id]
     subnet_ids              = var.subnets
