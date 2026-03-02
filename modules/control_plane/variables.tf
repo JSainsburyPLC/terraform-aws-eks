@@ -61,6 +61,12 @@ variable "cluster_create_security_group" {
   default     = true
 }
 
+variable "cluster_authentication_mode" {
+  description = "The authentication mode for the cluster that is one of CONFIG_MAP, API or API_AND_CONFIG_MAP"
+  type        = string
+  default     = "API_AND_CONFIG_MAP"
+}
+
 variable "iam_path" {
   description = "If provided, all IAM roles will be created on this path."
   type        = string
