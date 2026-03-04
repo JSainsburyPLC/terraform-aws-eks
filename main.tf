@@ -17,6 +17,7 @@ module "control_plane" {
   cluster_name                         = var.cluster_name
   cluster_security_group_id            = var.cluster_security_group_id
   cluster_version                      = var.cluster_version
+  cluster_authentication_mode          = var.cluster_authentication_mode
   config_output_path                   = var.config_output_path
   create_eks                           = var.create_eks
   eks_oidc_root_ca_thumbprint          = var.eks_oidc_root_ca_thumbprint
