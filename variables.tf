@@ -43,6 +43,12 @@ variable "cluster_authentication_mode" {
   default     = "API_AND_CONFIG_MAP"
 }
 
+variable "bootstrap_cluster_creator_admin_permissions" {
+  description = "Whether to give cluster creator admin permissions when using API authentication mode. Only applicable if cluster_authentication_mode is set to API or API_AND_CONFIG_MAP."
+  type        = bool
+  default     = false
+}
+
 variable "config_output_path" {
   description = "Where to save the Kubectl config file (if `write_kubeconfig = true`). Assumed to be a directory if the value ends with a forward slash `/`."
   type        = string

@@ -16,8 +16,8 @@ resource "aws_eks_cluster" "this" {
   tags                      = var.tags
   deletion_protection       = var.deletion_protection
   access_config {
-    authentication_mode = var.cluster_authentication_mode
-    bootstrap_cluster_creator_admin_permissions = false
+    authentication_mode                         = var.cluster_authentication_mode
+    bootstrap_cluster_creator_admin_permissions = var.bootstrap_cluster_creator_admin_permissions
   }
 
   vpc_config {
