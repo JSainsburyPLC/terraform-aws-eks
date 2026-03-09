@@ -15,6 +15,10 @@ resource "aws_eks_cluster" "this" {
   version                   = var.cluster_version
   tags                      = var.tags
   deletion_protection       = var.deletion_protection
+  access_config {
+    authentication_mode                         = var.cluster_authentication_mode
+    bootstrap_cluster_creator_admin_permissions = var.bootstrap_cluster_creator_admin_permissions
+  }
 
   vpc_config {
     security_group_ids      = [local.cluster_security_group_id]
