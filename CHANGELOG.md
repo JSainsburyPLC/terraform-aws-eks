@@ -2,11 +2,18 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v11.3.1"></a>
+## [v11.3.1] - 2026-03-09
+### 🔧 Maintenance
+- [7f8fa14](https://github.com/devopsmakers/terraform-aws-eks/commit/7f8fa14) add eks cluster authentication mode ([#10](https://github.com/devopsmakers/terraform-aws-eks/issues/10))
+
+
 <a name="v11.3.0"></a>
 ## [v11.3.0] - 2025-10-06
 ### 🔧 Maintenance
 - [cc763f2](https://github.com/devopsmakers/terraform-aws-eks/commit/cc763f2) default true for deletion protection ([#9](https://github.com/devopsmakers/terraform-aws-eks/issues/9))
 - [4449c6a](https://github.com/devopsmakers/terraform-aws-eks/commit/4449c6a) add deletion_protection ([#8](https://github.com/devopsmakers/terraform-aws-eks/issues/8))
+- **release:** [53b807c](https://github.com/devopsmakers/terraform-aws-eks/commit/53b807c) Update changelog for v11.3.0
 
 
 <a name="v11.2.3"></a>
@@ -174,7 +181,8 @@
 - [6338f6d](https://github.com/devopsmakers/terraform-aws-eks/commit/6338f6d) Initial commit
 
 
-[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.3.0...HEAD
+[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.3.1...HEAD
+[v11.3.1]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.3.0...v11.3.1
 [v11.3.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.3...v11.3.0
 [v11.2.3]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.2...v11.2.3
 [v11.2.2]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.1...v11.2.2
