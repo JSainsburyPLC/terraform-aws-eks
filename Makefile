@@ -1,9 +1,8 @@
-.PHONY: release
+.PHONY: release guard
 
-TYPE := patch
-VERSION := $(shell semtag final -s $(TYPE) -o)
+VERSION = $(shell semtag final -s $(TYPE) -o)
 
-release:
+release: guard
 	git checkout master
 	git pull origin master
 	@echo $(VERSION) | grep "ERROR" && exit 1 || true
@@ -12,3 +11,9 @@ release:
 	git commit -m "chore(release): Update changelog for $(VERSION)"
 	git tag $(VERSION)
 	git push origin master --tags
+
+guard:
+	@if [ -z "$(TYPE)" ]; then \
+			echo "ERROR: TYPE is required. Usage: make release TYPE=patch|minor|major"; \
+			exit 1; \
+	fi
