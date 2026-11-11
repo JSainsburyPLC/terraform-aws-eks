@@ -341,3 +341,9 @@ variable "region" {
   type        = string
   description = "AWS region"
 }
+
+variable "scheduler_type" {
+  type        = string
+  description = "The scheduler type to use for the EKS cluster. Valid values are `LeastAllocated` and `MostAllocated`."
+  default     = "LeastAllocated"
+}

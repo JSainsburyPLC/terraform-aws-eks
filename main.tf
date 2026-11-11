@@ -31,6 +31,7 @@ module "control_plane" {
   tags                                        = var.tags
   vpc_id                                      = var.vpc_id
   write_kubeconfig                            = var.write_kubeconfig
+  scheduler_type                              = var.scheduler_type
 }
 
 module "worker_groups" {

@@ -28,6 +28,22 @@ resource "aws_eks_cluster" "this" {
     public_access_cidrs     = var.cluster_endpoint_public_access_cidrs
   }
 
+  kube_scheduler_config {
+    node_resources_fit {
+      scoring_strategy {
+        type = var.scheduler_type
+        resource {
+          name   = "cpu"
+          weight = 1
+        }
+        resource {
+          name   = "memory"
+          weight = 1
+        }
+      }
+    }
+  }
+
   dynamic encryption_config {
     for_each = toset(var.cluster_encryption_key_arn != "" ? ["encryption_enabled"] : [])
 
