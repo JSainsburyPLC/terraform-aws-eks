@@ -183,3 +183,9 @@ variable "deletion_protection" {
   type        = bool
   default     = true
 }
+
+variable "scheduler_type" {
+  description = "The scheduler type to use for the EKS cluster. Valid values are `LeastAllocated` and `MostAllocated`."
+  type        = string
+  default     = "LeastAllocated"
+}
