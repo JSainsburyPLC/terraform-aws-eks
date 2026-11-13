@@ -2,10 +2,17 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v11.4.0"></a>
+## [v11.4.0] - 2026-11-13
+### 🔧 Maintenance
+- [b287beb](https://github.com/devopsmakers/terraform-aws-eks/commit/b287beb) add scheduler selection - BOS-4611 ([#11](https://github.com/devopsmakers/terraform-aws-eks/issues/11))
+
+
 <a name="v11.3.1"></a>
 ## [v11.3.1] - 2026-03-09
 ### 🔧 Maintenance
 - [7f8fa14](https://github.com/devopsmakers/terraform-aws-eks/commit/7f8fa14) add eks cluster authentication mode ([#10](https://github.com/devopsmakers/terraform-aws-eks/issues/10))
+- **release:** [7f1c7b1](https://github.com/devopsmakers/terraform-aws-eks/commit/7f1c7b1) Update changelog for v11.3.1
 
 
 <a name="v11.3.0"></a>
@@ -181,7 +188,8 @@
 - [6338f6d](https://github.com/devopsmakers/terraform-aws-eks/commit/6338f6d) Initial commit
 
 
-[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.3.1...HEAD
+[Unreleased]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.4.0...HEAD
+[v11.4.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.3.1...v11.4.0
 [v11.3.1]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.3.0...v11.3.1
 [v11.3.0]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.3...v11.3.0
 [v11.2.3]: https://github.com/devopsmakers/terraform-aws-eks/compare/v11.2.2...v11.2.3
